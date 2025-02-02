@@ -6,6 +6,12 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		E728F6EC2D4EFB4E009F949E /* GRDB in Frameworks */ = {isa = PBXBuildFile; productRef = E728F6EB2D4EFB4E009F949E /* GRDB */; };
+		E728F6F22D4F08A5009F949E /* PostgREST in Frameworks */ = {isa = PBXBuildFile; productRef = E728F6F12D4F08A5009F949E /* PostgREST */; };
+		E728F6F42D4F08A5009F949E /* Supabase in Frameworks */ = {isa = PBXBuildFile; productRef = E728F6F32D4F08A5009F949E /* Supabase */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		E728F6CE2D4EF3A0009F949E /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -52,6 +58,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E728F6F22D4F08A5009F949E /* PostgREST in Frameworks */,
+				E728F6EC2D4EFB4E009F949E /* GRDB in Frameworks */,
+				E728F6F42D4F08A5009F949E /* Supabase in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -112,6 +121,9 @@
 			);
 			name = Bastion;
 			packageProductDependencies = (
+				E728F6EB2D4EFB4E009F949E /* GRDB */,
+				E728F6F12D4F08A5009F949E /* PostgREST */,
+				E728F6F32D4F08A5009F949E /* Supabase */,
 			);
 			productName = Bastion;
 			productReference = E728F6BD2D4EF39F009F949E /* Bastion.app */;
@@ -195,6 +207,10 @@
 			);
 			mainGroup = E728F6B42D4EF39F009F949E;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				E728F6EA2D4EFB4D009F949E /* XCRemoteSwiftPackageReference "GRDB.swift" */,
+				E728F6F02D4F08A5009F949E /* XCRemoteSwiftPackageReference "supabase-swift" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = E728F6BE2D4EF39F009F949E /* Products */;
 			projectDirPath = "";
@@ -552,6 +568,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		E728F6EA2D4EFB4D009F949E /* XCRemoteSwiftPackageReference "GRDB.swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/groue/GRDB.swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.0.0;
+			};
+		};
+		E728F6F02D4F08A5009F949E /* XCRemoteSwiftPackageReference "supabase-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/supabase-community/supabase-swift";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.5.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		E728F6EB2D4EFB4E009F949E /* GRDB */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E728F6EA2D4EFB4D009F949E /* XCRemoteSwiftPackageReference "GRDB.swift" */;
+			productName = GRDB;
+		};
+		E728F6F12D4F08A5009F949E /* PostgREST */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E728F6F02D4F08A5009F949E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = PostgREST;
+		};
+		E728F6F32D4F08A5009F949E /* Supabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = E728F6F02D4F08A5009F949E /* XCRemoteSwiftPackageReference "supabase-swift" */;
+			productName = Supabase;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E728F6B52D4EF39F009F949E /* Project object */;
 }

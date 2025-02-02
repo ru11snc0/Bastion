@@ -9,6 +9,10 @@ import SwiftUI
 
 @main
 struct BastionApp: App {
+    init() {
+        _ = DatabaseManager.shared // Initialize database
+    }
+
     var body: some Scene {
         WindowGroup {
             ContentView()
